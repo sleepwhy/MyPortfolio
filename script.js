@@ -43,7 +43,7 @@ span.addEventListener("mouseleave", () => {
 
 
 
-const boxes = document.querySelectorAll('.box, .aboutText, #skills, .progressSys');
+const boxes = document.querySelectorAll('.box, .aboutText, #skills, .progressSys, .aboutDiv, .project, .projects-title');
 
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -106,10 +106,36 @@ document.querySelectorAll('.logo-track img').forEach(img => {
   
 
 
-const aboutText = document.querySelector(".aboutText");
+const buttons = document.querySelectorAll(".projectImg");  
+const popup = document.querySelector(".main-popup");
+const closeButton = document.querySelector(".popup-close");
+const popupImg = document.querySelector("#popupImg");
+const popupTitle = document.querySelector(".popup-title");
+const checkItBtn = document.querySelector(".checkItBtn");
 
-console.log(window.innerWidth);
+buttons.forEach(el => {
+  el.addEventListener("click", e => {
+    popup.style.display = "flex";
+    
+    const imgSrc = e.target.src;
+    const imgTitle = e.target.dataset.title;
+    const imgLink = e.target.dataset.link;
 
+    popupImg.setAttribute("src", imgSrc);
+    popupTitle.innerText = imgTitle;
+    checkItBtn.onclick = () => {
+      window.open(imgLink, "_blank"); 
+    };
+  });
+});
 
+closeButton.addEventListener("click", e => {
+    popup.style.display = "none";  // Pop-up'ı kapat
+});
 
+popup.addEventListener("click", e => {
+    if (e.target.className === "main-popup") {
+        popup.style.display = "none"; 
+    }
+});
 

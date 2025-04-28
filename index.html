@@ -76,7 +76,7 @@
                                         class="dropdown-menu"
                                         aria-labelledby="dropdownId"
                                     >
-                                        <a class="dropdown-item" href="#"
+                                        <a class="dropdown-item" href="#linkProject"
                                             ><span class="indexSpan me-1">2-0. </span>Projects</a
                                         >
                                         <a class="dropdown-item" href="#"
@@ -122,12 +122,12 @@
             </nav>
             
         </header>
-        <main class="mt-3" style="min-height: 3000px;">
+        <main class="mt-3">
             <div class="container pt-5">
                 <h1 class="goal display-1" style="line-height: calc(5vw + 60px);">"Challenges? They're just <span class="algorithmText">algorith</span>ms waiting to be solved. 
                     With every line of <span id="codeText">code</span>, I get one step closer to my goals."
                 </h1>
-
+                <hr id="hr1">
                 <div class="aboutDiv">
                     <div class="aboutMe row" id="aboutMe">
                         <div class="box col-12"><h1 class="w-100 h-100 display-3" id="whoAmI"><p class="who">Who am I</p></div>
@@ -139,7 +139,7 @@
                     </p>
                 </div>
 
-
+                <hr id="hr2">
 
                     <div class="skills" style="margin-top: 200px;" id="skills">
                         <h1 class="display-1" >Skills</h1>
@@ -184,22 +184,96 @@
                       </div>
                     </div>              
                     
-                    <div class="row" style="margin-top: 300px; color: white; row-gap: 60px;">
-                        <h1 class="display-1">Projects</h1>
-                        <div class="col-lg-5 project">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, dolorem, commodi inventore laudantium debitis asperiores fugit, sequi animi id consequuntur minus eaque facere. Facilis quae provident exercitationem fugiat dolores aut.</div>
-                        <div class="col-lg-5 offset-lg-2 project">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ipsam voluptates fugit qui necessitatibus molestias deserunt perferendis! Eaque nisi nesciunt assumenda voluptatum eveniet quia beatae deserunt eos qui reiciendis? Rem.</div>
-                        <div class="col-lg-5 project">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, dolorem, commodi inventore laudantium debitis asperiores fugit, sequi animi id consequuntur minus eaque facere. Facilis quae provident exercitationem fugiat dolores aut.</div>
-                        <div class="col-lg-5 offset-lg-2 project">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ipsam voluptates fugit qui necessitatibus molestias deserunt perferendis! Eaque nisi nesciunt assumenda voluptatum eveniet quia beatae deserunt eos qui reiciendis? Rem.</div>
+                    <hr id="hr3">
+
+                    <div class="row" style="margin-top: 230px; color: white; row-gap: 60px;" id="linkProject">
+                        <h1 class="display-1 projects-title">Projects</h1>
+
+                        <div class="col-lg-5 project">
+                            <div class="card">
+                                <div class="image-box">
+                                    <img src="photos/projects/proje1.png" alt="" class="projectImg" data-title="Library Project" data-link="https://github.com/sleepwhy/LibaryProject">
+                                    <div class="overlay">
+                                        <div class="overlay-text">Library Project</div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <h2 class="text-center mt-3">Libary Project</h2>
+                            <p class="m-4">Libary Project is a simple library management system developed with C#.
+                                It allows users to add, update, delete, and search for books easily.
+                                The project is designed for learning purposes with a clean and user-friendly interface.</p>
+                        </div>
                         
+
+                        <div class="col-lg-5 offset-lg-2 project">
+                            <div class="card">
+                                <div class="image-box">
+                                    <img src="photos/projects/proje2.png" alt="" class="projectImg" data-title="Notepad Project" data-link="https://github.com/sleepwhy/MyNotePad">
+                                    <div class="overlay">
+                                        <div class="overlay-text">Notepad Project</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 class="text-center mt-3">MyNotepad Project</h2>
+                            <p class="m-4">MyNotePad is a lightweight and clean note-taking application built with C# using Windows Forms.
+                                Inspired by Microsoft Notepad, it adds a modern touch and useful features while keeping things simple.</p>
+                        </div>
+
+                        <div class="col-lg-5 project">
+                            <div class="card">
+                                <div class="image-box">
+                                    <img src="photos/projects/proje3.png" alt="" class="projectImg" data-title="Console Bank Project" data-link="https://github.com/sleepwhy/basicBankSystem">
+                                    <div class="overlay">
+                                        <div class="overlay-text">Bank Project</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 class="text-center mt-3">Console Bank Project</h2>
+                            <p class="m-4">A simple C++ application that enables users to create, update, and manage bank accounts. Perform essential operations like deposit, withdrawal, and account search with ease.</p>
+                        </div>
+
+                        <div class="col-lg-5 offset-lg-2 project">
+                            <div class="card">
+                                <div class="image-box">
+                                    <img src="photos/projects/proje4.png" alt="" class="projectImg" data-title="Cinema Seat Project" data-link="https://github.com/sleepwhy/CinemaSeatReservationSystem">
+                                    <div class="overlay">
+                                        <div class="overlay-text">Cinema Seat Project</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 class="text-center mt-3">Cinema Seat Project</h2>
+                            <p class="m-4">This project is a cinema seat reservation system built with C# Windows Forms. It allows users to select and reserve seats, display the available seats in a cinema hall, and manage the layout dynamically.</p>
+                        </div>
+
+
+                    <div class="main-popup">
+                        <div class="popup">
+                            <div class="popupImg-div">
+                                <img src="" alt="" id="popupImg">
+                            </div>
+                            
+                            <div class="popup-close">x</div>
+
+
+                            <h3 class="mb-3 popup-title">Javascript Eğitimi</h3>
+                            <div>
+                                <button class="checkItBtn">Check it out on github</button>
+                            </div>
+                            
+                        </div>
                     </div>
-                    
 
 
 
 
             </div>
         </main>
-        
+
+        <footer>
+
+        </footer>
+
+
         <script src="script.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -213,4 +287,3 @@
         ></script>
     </body>
 </html>
-z
