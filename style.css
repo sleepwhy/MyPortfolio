@@ -4,13 +4,21 @@
     --back-color-3: #081a36;
     --primary-text-color: #FFFFFF;
     --secondary-text-color: #B0B0B0;
+    --other-text-color:#ecf0f1;
     --accent-color-1: #00FF85;
     --accent-color-2: #1E90FF;
     --hover-color: #FF0099;
+    --box-color: #24242c;
+    --icon-color: #de2d3c;
     --main-font: "Roboto", sans-serif;
     --secondary-font: "Nunito", sans-serif;
     --title-font: "Rokkitt", serif;
     --tech-font: "Orbitron", sans-serif;
+
+
+
+    --footer-bg: url(SVGs/footerBG.svg);
+    --border-cl: rgb(72, 0, 255);
 }
   
 .primaryText {
@@ -52,9 +60,13 @@
 }
 
 .dropdown-item:hover{
-    background-color: var(--back-color-2);
+    background-color: grey;
     color: #fa40ad; 
 }
+
+
+  
+
 
 #mailButton{
     background-color: var(--back-color);
@@ -81,6 +93,7 @@ main{
     padding-top: 64px;
     background-color: var(--back-color-3);
     padding-bottom: 40px;
+    transition: background-color 1s;
 }
 
 hr {
@@ -91,15 +104,19 @@ hr {
 }
 
 .goal{
-    color: #ecf0f1;
+    color: var(--other-text-color)
 }
 
 .algorithmText {
     background-image: url('SVGs/FrameAlgoBack.svg');    
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
-  }
+}
+
+.skills-text{
+    color: var(--other-text-color);
+    transition: color 1s;
+}
 
 .modal-backdrop {--bs-backdrop-zindex: 1000;}
 #codeText{
@@ -113,50 +130,56 @@ hr {
     border-bottom-style: solid;
 }
 
-.aboutDiv {
-    position: relative; /* Parent elementin konumunun belirli olması lazım */
-}
-.aboutDiv::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('SVGs/whoam.svg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.0; 
-    z-index: 0;
-    transition: opacity 2s;
-    
-}
-.aboutDiv.show::before{
-    opacity: 1; 
+.whtText{
+    color: var(--other-text-color);
+    font-size: 60px;
+    font-weight: 400;
+    opacity: 0;
+    transition: opacity 1s 1s;
 }
 
-#whoAmI{
-    font-family: var(--title-font);
-    color: var(--secondary-text-color);
-    font-size: calc(0.925rem + 3.3vw);
-    margin-bottom: 30px;
+.whtText.show{
+    opacity: 1;
 }
 
-#whoAmI .who{
-    background: url('SVGs/whoamTitle.svg');
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.aboutMe {
+.whatBox {
+    height: 450px;
+    background-color: var(--box-color);
+    border-radius: 15px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 200px;
-
+    align-items: center;
+    padding: 60px;
+    opacity: 0;
+    transform: rotateY(90deg); 
+    transition: opacity 0.9s 1s ease, transform 0.9s 1s ease, background-color 1s;
 }
+
+.whatBox.show {
+    opacity: 1;
+    transform: rotateY(0deg); /* Dönüp düzleşiyor */
+}
+
+.whatBox h3{
+    color: #cfcdd2;
+    margin-bottom: 40px;
+    font-family: 'SF Compact Display', sans-serif;
+    margin-top: 10px;
+}
+
+.whatBox h1{
+    color: var(--icon-color);
+    transition: color 1s;
+}
+
+.whatBox p{
+    color: #d5c7b2;
+    font-family: 'SF Pro Display', sans-serif;
+                                                
+    font-size: 21px;
+}
+
 
 .box {
     width: 100%;
@@ -178,27 +201,11 @@ hr {
     transform: translateY(0); 
 }
 
-.aboutText{
-    font-family: "Poppins", sans-serif;
-    font-size: 40px;
-    color: #6ec1e4;
-    opacity: 0;
-    transform: translateX(-70px); 
-    transition: opacity 1s 1s;
-    line-height: 4rem;
-    margin-bottom: 200px;
-}
-
-.aboutText.show {
-    opacity: 1;
-    transform: translateX(0); 
-}
-
 .logo-slider {
     overflow: hidden; /* Taşan öğeleri gizler */
     white-space: nowrap;
     position: relative;
-    background-image: url(SVGs/languagesBG.svg);
+    background-image: url(SVGs/languagesBGlight.svg);
     padding: 1rem 0;
     mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
     -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%); /* Safari desteği */
@@ -273,7 +280,7 @@ hr {
 background-image: url(SVGs/codingBG.svg);
 background-size: cover;
 padding-left: 60px;
-
+transition: all 2s;
 }
 
 .aboutMe {
@@ -284,18 +291,18 @@ padding-left: 60px;
 }
 
 .project {
-    border: 2px solid rgb(72, 0, 255);
+    border: var(--border-cl) 2px solid;
     height: 520px;
     padding: 0;
     overflow: hidden;
     border-radius: 25px;
     opacity: 0;
     transform: translateY(-50px);
-    transition: opacity 1s, transform 1s; /* transition süresi düzenlendi */
+    transition: opacity 1s, transform 1s, background 2s;
     background: url(SVGs/projectBG.svg);
     background-position: center center;
-
     background-repeat: no-repeat;
+
 }
 
 
@@ -305,6 +312,7 @@ padding-left: 60px;
 }
 
 .projects-title{
+    color: var(--other-text-color);
     opacity: 0;
     transition: opacity 1s 1s;
 }
@@ -325,6 +333,8 @@ padding-left: 60px;
 
 .project p{
     font-family: var(--main-font);
+    color: var(--other-text-color);
+    transition: color 1s;
 }
 
 .projectImg {
@@ -464,7 +474,42 @@ padding-left: 60px;
 #hr3{margin-top: 200px;}
 footer {
     height: 300px;
-    background: url(SVGs/footerBG.svg);
+    background: var(--footer-bg);
+    transition: background 1s;
+}
+
+.div-footer > a{
+    color: var(--back-color-2);
+    font-size: 50px;
+    margin: 0 20px;
+    transition: color 1s;
+}
+
+.div-footer > a:hover{
+    color: var(--hover-color);
+}
+
+
+.floating-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.3s ease;
+}
+  
+.floating-box:hover {
+    transform: scale(1.1);
 }
 
 
@@ -517,9 +562,6 @@ footer {
     }
     .checkItBtn {
         font-size: 11px;
-    }
-    .project p{
-
     }
 }
 

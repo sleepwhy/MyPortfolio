@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>sleepwhy</title>
+        <title>celiktas</title>
         <meta charset="utf-8" />
         <meta
             name="viewport"
@@ -27,15 +27,24 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+        <!-- test -->
+        <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/sf-compact-display" rel="stylesheet">
+                
+
     </head>
 
     <body>
+        <div class="floating-box">
+            <i class="fa-solid fa-moon"></i>
+        </div>
+          
         <header>
             <nav
                 class="navbar navbar-expand-sm navbar-light bg-dark fixed-top"
             >
                 <div class="container-fluid ">
-                    <a class="navbar-brand primaryText" href="#">sleepwhy</a>
+                    <a class="navbar-brand primaryText" href="#">celiktas</a>
                     <button
                     class="navbar-toggler d-lg-none"
                     type="button"
@@ -79,7 +88,7 @@
                                         <a class="dropdown-item" href="#linkProject"
                                             ><span class="indexSpan me-1">2-0. </span>Projects</a
                                         >
-                                        <a class="dropdown-item" href="#"
+                                        <a class="dropdown-item" href="#Contacts"
                                             ><span class="indexSpan me-2">2-1. </span> Contact</a
                                         >
                                     </div>
@@ -128,21 +137,59 @@
                     With every line of <span id="codeText">code</span>, I get one step closer to my goals."
                 </h1>
                 <hr id="hr1">
-                <div class="aboutDiv">
-                    <div class="aboutMe row" id="aboutMe">
-                        <div class="box col-12"><h1 class="w-100 h-100 display-3" id="whoAmI"><p class="who">Who am I</p></div>
+                <div>
+                    <h4 class="whtText text-center mb-5" style="margin-top: 100px; ">What I do?</h4>
+                    <div class="row g-4">
+                        <div class="col-lg-4">
+                            <div class="whatBox">
+                                <h1><i class="fas fa-cogs"></i></h1>
+                                <h3>Backend Development</h3>
+                                <p>I develop secure and efficient backend systems using C#, Python, and SQL. From APIs to data handling, I build with scalability in mind.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="whatBox">
+                                <h1><i class="fas fa-desktop"></i></h1>
+                                <h3>Desktop App</h3>
+                                <p>I create powerful desktop applications using C++ and C#. Whether it's tools or complete software, I build with usability in mind.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="whatBox">
+                                <h1><i class="fas fa-database"></i></h1>
+                                <h3>Database Design</h3>
+                                <p>I design reliable and scalable databases with a focus on structure, speed, and security. Clean schema, clean data.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="whatBox">
+                                <h1><i class="fas fa-paint-brush"></i></h1>
+                                <h3>UI/UX Design</h3>
+                                <p>I design clean, functional, and user-focused interfaces that offer smooth and intuitive experiences. Every pixel has a purpose.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="whatBox">
+                                <h1><i class="fas fa-code"></i></h1>
+                                <h3>Frontend Development</h3>
+                                <p>I build responsive and dynamic web interfaces using HTML, CSS, JavaScript, and Bootstrap. My goal is seamless performance on all devices.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="whatBox">
+                                <h1><i class="fas fa-brain"></i></h1>
+                                <h3>Algorithm Skills</h3>
+                                <p>I love solving complex problems with simple, optimized solutions. Algorithms are my playground, performance is my priority.</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="lead aboutText">
-                        Hey! I’m a computer programming student who believes every bug has a lesson. Whether it’s code or life, I enjoy solving problems and learning along the way.
-                        <br><br>
-                        When I’m not coding, I’m probably checking out new tech, gaming a bit, or overthinking an algorithm like it’s personal.
-                    </p>
                 </div>
+                
 
                 <hr id="hr2">
 
                     <div class="skills" style="margin-top: 200px;" id="skills">
-                        <h1 class="display-1" >Skills</h1>
+                        <h1 class="display-1 mb-4 skills-text" >Skills</h1>
                         <div class="gradientEffect">
                             <div class="logo-slider">
                                 <div class="logo-track">
@@ -187,7 +234,7 @@
                     <hr id="hr3">
 
                     <div class="row" style="margin-top: 230px; color: white; row-gap: 60px;" id="linkProject">
-                        <h1 class="display-1 projects-title">Projects</h1>
+                        <h1 class="display-1 projects-title mb-4">Projects</h1>
 
                         <div class="col-lg-5 project">
                             <div class="card">
@@ -266,11 +313,16 @@
 
 
 
-            </div>
+            </div>   
         </main>
 
         <footer>
-
+            <div class="d-flex justify-content-center align-items-center w-100 h-100 div-footer" id="Contacts">
+                <a href="mailto:celiktas.talha@icloud.com"><i class="fa-solid fa-envelope"></i></a>                  
+                <a href="https://www.instagram.com/sl3epwy?igsh=MW0ycjJoem1ubHkwag%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/sleepwhy" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/talhaceliktas?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
         </footer>
 
 
