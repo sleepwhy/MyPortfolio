@@ -61,25 +61,12 @@
 
 .dropdown-item:hover{
     background-color: grey;
-    color: #fa40ad; 
+    color: #fa40ad;
 }
 
-
-  
-
-
-#mailButton{
-    background-color: var(--back-color);
-    border: 0px;
-    padding: 19px;
-}
-
-#mailButton:hover{
-    color: #fa40ad; 
-}
-
-#mailButton > i{
-    font-size: calc(0.5vw + 15px) ;
+.main-icons{
+    font-size: 30px;
+    margin: 0 10px;
 }
 
 .indexSpan{
@@ -97,14 +84,15 @@ main{
 }
 
 hr {
-    border: none; /* Varsayılan sınırı kaldırıyoruz */
-    height: 2px; /* Yüksekliği ayarlıyoruz */
-    background: linear-gradient(to right, #c6341d, #feb47b); /* Gradyan arka plan */
-    margin: 20px 0; /* Üst ve alt boşluk */
+    border: none; 
+    height: 2px; 
+    background: linear-gradient(to right, #c6341d, #feb47b); 
+    margin: 20px 0; 
 }
 
 .goal{
-    color: var(--other-text-color)
+    color: var(--other-text-color);
+    transition: color 1s;
 }
 
 .algorithmText {
@@ -120,7 +108,7 @@ hr {
 
 .modal-backdrop {--bs-backdrop-zindex: 1000;}
 #codeText{
-    transition: all 0.5s ease;
+    transition: all 1s ease, font-size 0s 0s;
     border-bottom: 3px dashed var(--accent-color-1);
 }
 
@@ -135,7 +123,7 @@ hr {
     font-size: 60px;
     font-weight: 400;
     opacity: 0;
-    transition: opacity 1s 1s;
+    transition: opacity 1s 0.7s, color 1s;
 }
 
 .whtText.show{
@@ -153,12 +141,12 @@ hr {
     padding: 60px;
     opacity: 0;
     transform: rotateY(90deg); 
-    transition: opacity 0.9s 1s ease, transform 0.9s 1s ease, background-color 1s;
+    transition: opacity 0.9s 0.7s ease, transform 0.9s 0.7s ease, background-color 1s;
 }
 
 .whatBox.show {
     opacity: 1;
-    transform: rotateY(0deg); /* Dönüp düzleşiyor */
+    transform: rotateY(0deg); 
 }
 
 .whatBox h3{
@@ -166,6 +154,7 @@ hr {
     margin-bottom: 40px;
     font-family: 'SF Compact Display', sans-serif;
     margin-top: 10px;
+    text-align: center;
 }
 
 .whatBox h1{
@@ -202,25 +191,25 @@ hr {
 }
 
 .logo-slider {
-    overflow: hidden; /* Taşan öğeleri gizler */
+    overflow: hidden; 
     white-space: nowrap;
     position: relative;
     background-image: url(SVGs/languagesBGlight.svg);
     padding: 1rem 0;
     mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%); /* Safari desteği */
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%); 
 }
 
 .gradientEffect {
     mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%); /* Safari desteği */
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%); 
 }
 
 
 .logo-track {
     display: inline-block;
     animation: scrollLogos 20s linear infinite;
-    pointer-events: none; /* Bütün track'e etkileşim kapalı */
+    pointer-events: none; 
 }
 
 .logo-track img {
@@ -256,7 +245,7 @@ hr {
     text-align: center;
     margin-bottom: 30px;
     transform: translateY(-70px);
-    transition: transform 1s 1s, opacity 1s 1s;
+    transition: transform 0.9s 0.7s, opacity 1s 1s;
     opacity: 0;
 }
 
@@ -267,7 +256,7 @@ hr {
 
 .progressSys{
     transform: translateY(70px);
-    transition: transform 1s 1s, opacity 1s 1s;
+    transition: transform 0.9s 0.7s, opacity 0.9s 0.7s;
     opacity: 0;
 }
 
@@ -292,13 +281,12 @@ transition: all 2s;
 
 .project {
     border: var(--border-cl) 2px solid;
-    height: 520px;
     padding: 0;
     overflow: hidden;
     border-radius: 25px;
     opacity: 0;
     transform: translateY(-50px);
-    transition: opacity 1s, transform 1s, background 2s;
+    transition: opacity 1s, transform 1s, background 1s, border-color 1s;
     background: url(SVGs/projectBG.svg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -314,7 +302,7 @@ transition: all 2s;
 .projects-title{
     color: var(--other-text-color);
     opacity: 0;
-    transition: opacity 1s 1s;
+    transition: opacity 0.9s 0.7s, color 1s;
 }
 
 .projects-title.show{
@@ -438,7 +426,6 @@ transition: all 2s;
     overflow: hidden;
     object-fit: cover;
     width: 100%;
-    height: 300px; /* istediğin sabit yükseklik */
 }
 
 .overlay {
@@ -448,7 +435,7 @@ transition: all 2s;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.6); /* koyu yarı şeffaf arka plan */
+    background-color: rgba(0,0,0,0.6); 
     color: white;
     display: flex;
     align-items: center;
@@ -563,12 +550,27 @@ footer {
     .checkItBtn {
         font-size: 11px;
     }
+    .logo-track img {
+        height: 70px;
+        margin: 0 1.2rem;
+    }
+
 }
 
 @media screen and (max-width:420px) {
     .project p{
         font-size: calc(1vw + 10px);
     }
+    .whatBox h3{
+        font-size: calc(1.3rem + -0.4vw);
+    }
+    .whatBox p{
+        font-size: calc(15px + 1vw);
+    }
+    .div-footer > a {
+        font-size: 35px;
+    }
+
 }
 
 

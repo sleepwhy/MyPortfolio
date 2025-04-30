@@ -1,15 +1,4 @@
-
-// Mail kopyalama
-
-function copyText() {
-  const copyInput = "avrol928@gmail.com";
-  navigator.clipboard.writeText(copyInput).then(() => {
-    alert("Copied! 📋");
-  }).catch(err => {
-    alert("Error! 😢", err);
-  });
-}
-
+// Hello!
 ///////////////////////////////////////////////////////
 
 
