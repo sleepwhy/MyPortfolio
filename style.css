@@ -269,7 +269,7 @@ hr {
 background-image: url(SVGs/codingBG.svg);
 background-size: cover;
 padding-left: 60px;
-transition: all 2s;
+transition: background-image 1s;
 }
 
 .aboutMe {

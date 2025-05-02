@@ -82,6 +82,8 @@ const skillLevels = {
   css: 80,
   bootstrap: 75,
   python: 60,
+  js: 40,
+  tailwind: 30
 };
 
 document.querySelectorAll('.logo-track img').forEach(img => {
